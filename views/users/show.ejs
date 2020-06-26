@@ -1,0 +1,42 @@
+<%- include("../partials/header") %>
+
+
+<div class="row">
+
+    <div class="col-md-4">
+
+        <div class="card">
+
+
+            <div class="card-body">
+                <h5 class="card-title"><%=user.firstName + " " + user.lastName %></h5>
+
+                <img src="../images/<%=user.avatar%>" class="card-img-top" alt="profile pic">
+                <p></p>
+                <a href="mailto:<%=user.email%>"><%=user.email%></a>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="col-md-8">
+        <ul>
+            <%fashionCatalog.forEach(function(fashionItem) {%>
+
+                    <li>
+
+                        <a href="/fashion/<%=fashionItem._id%>"><%=fashionItem.name%></a>
+                    </li>
+
+           <%});%>  
+        </ul>
+    </div>
+
+</div>
+
+
+
+
+<%- include("../partials/footer") %>

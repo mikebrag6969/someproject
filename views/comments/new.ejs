@@ -1,0 +1,34 @@
+<%- include("../partials/header") %>
+
+
+
+ 
+        <h1 style="text-align:center;">
+            create new comment to <%= fashionItem.name %>
+        </h1>
+    
+        
+        <div style="width: 25%; margin: 0 auto;">
+            <form action="/fashion/<%=fashionItem._id%>/comments" method="POST">
+               
+        
+                <div class="form-group">
+                    <input type="text" class="form-control" name="comment[text]" placeholder="Text">
+                </div>
+ 
+        
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">
+                        Submit
+                    </button>
+                </div>
+        
+        
+        
+            </form>
+      <a href="/fashion">go back!</a>
+    </div>
+
+ 
+
+<%- include("../partials/footer") %>
